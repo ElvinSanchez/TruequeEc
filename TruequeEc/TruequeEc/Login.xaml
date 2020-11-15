@@ -19,8 +19,8 @@
                     <Entry Placeholder="Contraseña" PlaceholderColor="White" IsPassword="True"/>
                     <Button Text="Iniciar sesión" BackgroundColor="White" BorderRadius="20" TextColor="Aqua"/>
                     <StackLayout Orientation="Horizontal">
-                        <Button x:Name="CambioPassword" BackgroundColor="Transparent" BorderColor="Transparent" Text="¿Recuperar contraseña?" Clicked="CambioPassword_Clicked"/>
-                        <Button x:Name="Registro" BackgroundColor="Transparent" BorderColor="Transparent"  Text="Registrarse" Clicked="Registro_Clicked"/>
+                        <Label Text="¿Recuperar contraseña?"/>
+                        <Label Text="Registrarse" HorizontalOptions="EndAndExpand" FontAttributes="Bold"/>
                     </StackLayout>
                 </StackLayout>
 

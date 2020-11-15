@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using TruequeEc.Views;
 
 namespace TruequeEc
 {
@@ -16,16 +15,6 @@ namespace TruequeEc
         public Login()
         {
             InitializeComponent();
-        }
-
-        private async void Registro_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Registro());
-        }
-
-        private async void CambioPassword_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Password());
         }
     }
 }

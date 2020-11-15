@@ -10,7 +10,7 @@ namespace TruequeEc
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Login());
+            MainPage = new Login();
         }
 
         protected override void OnStart()

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TruequeEc.Views.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection Title="Nuevo Usuario" TextColor="Gray" >
+                        <EntryCell x:Name="Code"  Label="Nombre" />
+                        <EntryCell x:Name="User" Label="Usuario" />
+                        <EntryCell x:Name="Password" Label="Contraseña" />
+                        <EntryCell x:Name="Email" Label="E-mail" />                        
+                        <EntryCell x:Name="City"  Label="Ciudad" />
+                    </TableSection>
+                </TableRoot>                
+            </TableView>
+            <Button x:Name="Guardar"
+                    Text="Guardar"
+                    Clicked="Guardar_Clicked">                
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TruequeEc.Metodos.Insertar">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="POST - INSERTAR"/>
+            <Entry x:Name="code" Placeholder="Ingrese el codigo"/>
+            <Entry x:Name="user" Placeholder="Ingrese el usuario"/>
+            <Entry x:Name="password" Placeholder="Ingrese la contraseña"/>
+            <Entry x:Name="email" Placeholder="Ingrese el correo electrónico"/>
+            <Entry x:Name="city" Placeholder="Ingrese la ciudad"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="0" Text="Insertar dato" x:Name="btnInsertar" Clicked="btnInsertar_Clicked"/>
+                <Button Grid.Row="0" Grid.Column="1" Text="Regresar" x:Name="btnRegresar" Clicked="btnRegresar_Clicked"/>
+
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

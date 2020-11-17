@@ -36,11 +36,11 @@ namespace TruequeEc.Metodos
                 parametros.Add("correo", email.Text);
                 parametros.Add("ciudad", city.Text);
                 cliente.UploadValues("http://192.168.0.12/moviles/post.php", "POST", parametros);
-                await DisplayAlert("Alerta", "Dato ingresado correctamente", "OK");
+                await DisplayAlert("Alerta", "Dato ingresado correctamente", "Aceptar");
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Alerta", "ERROR: " + ex.Message, "OK");
+                await DisplayAlert("Alerta", "ERROR: " + ex.Message, "Aceptar");
             }
         }
     }

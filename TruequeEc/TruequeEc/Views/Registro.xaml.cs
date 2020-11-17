@@ -25,8 +25,7 @@ namespace TruequeEc.Views
             City.Text = string.Empty;
 
         }
-
-        private void Guardar_Clicked(object sender, EventArgs e)
+        private void Save_Clicked(object sender, EventArgs e)
         {
             string user = User.Text;
             string pass = Password.Text;
@@ -40,7 +39,6 @@ namespace TruequeEc.Views
                 DisplayAlert("Información", "Registro guardado exitosamente", "Aceptar");
                 ClearLabels();
             }
-
         }
     }
 }

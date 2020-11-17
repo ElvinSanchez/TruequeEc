@@ -15,9 +15,9 @@
                     </TableSection>
                 </TableRoot>                
             </TableView>
-            <Button x:Name="Guardar"
+            <Button x:Name="Save"
                     Text="Guardar"
-                    Clicked="Guardar_Clicked">                
+                    Clicked="Save_Clicked">                
             </Button>
         </StackLayout>
     </ContentPage.Content>

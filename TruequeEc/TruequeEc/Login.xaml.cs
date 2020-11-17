@@ -20,8 +20,7 @@ namespace TruequeEc
 
         private async void Registro_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Registro());
-            //
+            await Navigation.PushAsync(new Registro());         
         }
 
         private async void CambioPassword_Clicked(object sender, EventArgs e)

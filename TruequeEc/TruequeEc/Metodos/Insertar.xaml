@@ -23,8 +23,6 @@
 
                 <Button Grid.Row="0" Grid.Column="0" Text="Insertar dato" x:Name="btnInsertar" Clicked="btnInsertar_Clicked"/>
                 <Button Grid.Row="0" Grid.Column="1" Text="Regresar" x:Name="btnRegresar" Clicked="btnRegresar_Clicked"/>
-
-
             </Grid>
         </StackLayout>
     </ContentPage.Content>

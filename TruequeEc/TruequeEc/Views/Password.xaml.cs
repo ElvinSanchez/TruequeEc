@@ -36,6 +36,7 @@ namespace TruequeEc.Views
                 else
                 {
                     DisplayAlert("Alerta", "Las contraseñas no coinciden", "Aceptar");
+
                 }
             }
             

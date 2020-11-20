@@ -17,7 +17,7 @@ namespace TruequeEc.Metodos
     {
         private const string Url = "http://127.0.0.1/clientes/post.php";
         private readonly HttpClient client = new HttpClient();
-        private ObservableCollection<TruequeEc.Ws.Datos> _post;
+        private ObservableCollection<TruequeEc.Models.Datos> _post;
         public Put()
         {
             InitializeComponent();
@@ -28,14 +28,14 @@ namespace TruequeEc.Metodos
             try
             {
                 var content = await client.GetStringAsync(Url);
-                List<TruequeEc.Ws.Datos> posts = JsonConvert.DeserializeObject<List<TruequeEc.Ws.Datos>>(content);
-                _post = new ObservableCollection<TruequeEc.Ws.Datos>(posts);
+                 List<TruequeEc.Models.Datos> posts = JsonConvert.DeserializeObject<List<TruequeEc.Models.Datos>>(content);
+                 _post = new ObservableCollection<TruequeEc.Models.Datos>(posts);
+                
 
-               
             }
             catch (Exception ex)
             {
-                DisplayAlert("Error", "Error" + ex.Message, "ok");
+               await DisplayAlert("Error", "Error" + ex.Message, "ok");
             }
         }
 
@@ -47,8 +47,8 @@ namespace TruequeEc.Metodos
                 HttpClient cliente = new HttpClient();
                 await DisplayAlert("alerta", "Eliminado correctamente: ", "ok");
 
-                
-            
+
+
             }
             catch (Exception ex)
             {
@@ -61,3 +61,4 @@ namespace TruequeEc.Metodos
 
         }
     }
+}

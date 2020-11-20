@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TruequeEc.Models.Cliente">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Datos" HorizontalTextAlignment="Center"/>
+
+            <ListView x:Name="MyListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label x:Name="lblNombre" Text="{Binding nombre}"></Label>
+                                <Label x:Name="lblApellido" Text="{Binding apellido}"></Label>
+                                <Label x:Name="lblCorreo" Text="{Binding correo}"></Label>
+                                <Label x:Name="lblCiudad" Text="{Binding ciudad}"></Label>
+                                <Label x:Name="lblTelefono" Text="{Binding telefono}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

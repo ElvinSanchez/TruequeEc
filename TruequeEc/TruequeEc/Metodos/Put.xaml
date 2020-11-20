@@ -27,6 +27,7 @@
                     x:Name="btnRegresar"
                     Clicked="btnRegresar_Clicked">
                 </Button>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

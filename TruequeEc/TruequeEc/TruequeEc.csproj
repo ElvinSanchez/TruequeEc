@@ -22,7 +22,7 @@
     <EmbeddedResource Update="Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Metodos\Insertar.xaml">
+    <EmbeddedResource Update="Metodos\Post-Insertar.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Models\Perfil.xaml">
@@ -44,5 +44,7 @@
 
   <ItemGroup>
     <Folder Include="ViewsModels\" />
+    <Folder Include="Views\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>

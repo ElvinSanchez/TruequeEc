@@ -6543,6 +6543,9 @@ namespace TruequeEc.Droid
 			// aapt resource value: 0x7F0300F4
 			public const int iconifiedByDefault = 2130903284;
 			
+			// aapt resource value: 0x7F0300F4
+			public const int iconifiedByDefault = 2130903284;
+			
 			// aapt resource value: 0x7F0300EF
 			public const int iconPadding = 2130903279;
 			
@@ -6599,6 +6602,9 @@ namespace TruequeEc.Droid
 			
 			// aapt resource value: 0x7F030102
 			public const int itemTextAppearance = 2130903298;
+			
+			// aapt resource value: 0x7F030103
+			public const int itemTextAppearanceActive = 2130903299;
 			
 			// aapt resource value: 0x7F030103
 			public const int itemTextAppearanceActive = 2130903299;
@@ -7523,6 +7529,39 @@ namespace TruequeEc.Droid
 			// aapt resource value: 0x7F05004C
 			public const int material_deep_teal_200 = 2131034188;
 			
+			// aapt resource value: 0x7F050042
+			public const int error_color_material_dark = 2131034178;
+			
+			// aapt resource value: 0x7F050043
+			public const int error_color_material_light = 2131034179;
+			
+			// aapt resource value: 0x7F050044
+			public const int foreground_material_dark = 2131034180;
+			
+			// aapt resource value: 0x7F050045
+			public const int foreground_material_light = 2131034181;
+			
+			// aapt resource value: 0x7F050046
+			public const int highlighted_text_material_dark = 2131034182;
+			
+			// aapt resource value: 0x7F050047
+			public const int highlighted_text_material_light = 2131034183;
+			
+			// aapt resource value: 0x7F050048
+			public const int launcher_background = 2131034184;
+			
+			// aapt resource value: 0x7F050049
+			public const int material_blue_grey_800 = 2131034185;
+			
+			// aapt resource value: 0x7F05004A
+			public const int material_blue_grey_900 = 2131034186;
+			
+			// aapt resource value: 0x7F05004B
+			public const int material_blue_grey_950 = 2131034187;
+			
+			// aapt resource value: 0x7F05004C
+			public const int material_deep_teal_200 = 2131034188;
+			
 			// aapt resource value: 0x7F05004D
 			public const int material_deep_teal_500 = 2131034189;
 			
@@ -7621,6 +7660,9 @@ namespace TruequeEc.Droid
 			
 			// aapt resource value: 0x7F05006E
 			public const int mtrl_textinput_hovered_box_stroke_color = 2131034222;
+			
+			// aapt resource value: 0x7F05006A
+			public const int mtrl_text_btn_text_color_selector = 2131034218;
 			
 			// aapt resource value: 0x7F05006A
 			public const int mtrl_text_btn_text_color_selector = 2131034218;
@@ -8000,6 +8042,27 @@ namespace TruequeEc.Droid
 			
 			// aapt resource value: 0x7F06005F
 			public const int design_bottom_navigation_item_min_width = 2131099743;
+			
+			// aapt resource value: 0x7F060060
+			public const int design_bottom_navigation_margin = 2131099744;
+			
+			// aapt resource value: 0x7F060061
+			public const int design_bottom_navigation_shadow_height = 2131099745;
+			
+			// aapt resource value: 0x7F060062
+			public const int design_bottom_navigation_text_size = 2131099746;
+			
+			// aapt resource value: 0x7F060063
+			public const int design_bottom_sheet_modal_elevation = 2131099747;
+			
+			// aapt resource value: 0x7F060064
+			public const int design_bottom_sheet_peek_height_min = 2131099748;
+			
+			// aapt resource value: 0x7F060065
+			public const int design_fab_border_width = 2131099749;
+			
+			// aapt resource value: 0x7F060066
+			public const int design_fab_elevation = 2131099750;
 			
 			// aapt resource value: 0x7F060060
 			public const int design_bottom_navigation_margin = 2131099744;
@@ -8954,6 +9017,9 @@ namespace TruequeEc.Droid
 			// aapt resource value: 0x7F08004D
 			public const int filled = 2131230797;
 			
+			// aapt resource value: 0x7F08004D
+			public const int filled = 2131230797;
+			
 			// aapt resource value: 0x7F08004B
 			public const int fill_horizontal = 2131230795;
 			
@@ -8971,6 +9037,9 @@ namespace TruequeEc.Droid
 			
 			// aapt resource value: 0x7F080051
 			public const int forever = 2131230801;
+			
+			// aapt resource value: 0x7F080002
+			public const int FUNCTION = 2131230722;
 			
 			// aapt resource value: 0x7F080002
 			public const int FUNCTION = 2131230722;
@@ -9005,6 +9074,9 @@ namespace TruequeEc.Droid
 			// aapt resource value: 0x7F08005B
 			public const int italic = 2131230811;
 			
+			// aapt resource value: 0x7F08005B
+			public const int italic = 2131230811;
+			
 			// aapt resource value: 0x7F08005C
 			public const int item_touch_helper_previous_elevation = 2131230812;
 			
@@ -9016,6 +9088,9 @@ namespace TruequeEc.Droid
 			
 			// aapt resource value: 0x7F08005F
 			public const int left = 2131230815;
+			
+			// aapt resource value: 0x7F080060
+			public const int line1 = 2131230816;
 			
 			// aapt resource value: 0x7F080060
 			public const int line1 = 2131230816;
@@ -9049,6 +9124,9 @@ namespace TruequeEc.Droid
 			
 			// aapt resource value: 0x7F08006A
 			public const int message = 2131230826;
+			
+			// aapt resource value: 0x7F080003
+			public const int META = 2131230723;
 			
 			// aapt resource value: 0x7F080003
 			public const int META = 2131230723;
@@ -9136,6 +9214,9 @@ namespace TruequeEc.Droid
 			
 			// aapt resource value: 0x7F080086
 			public const int scroll = 2131230854;
+			
+			// aapt resource value: 0x7F08008A
+			public const int scrollable = 2131230858;
 			
 			// aapt resource value: 0x7F08008A
 			public const int scrollable = 2131230858;
@@ -11075,6 +11156,12 @@ namespace TruequeEc.Droid
 			// aapt resource value: 0x7F0E018B
 			public const int Widget_AppCompat_Button_Borderless_Colored = 2131624331;
 			
+			// aapt resource value: 0x7F0E018A
+			public const int Widget_AppCompat_Button_Borderless = 2131624330;
+			
+			// aapt resource value: 0x7F0E018B
+			public const int Widget_AppCompat_Button_Borderless_Colored = 2131624331;
+			
 			// aapt resource value: 0x7F0E018C
 			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131624332;
 			
@@ -11119,6 +11206,12 @@ namespace TruequeEc.Droid
 			
 			// aapt resource value: 0x7F0E019C
 			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131624348;
+			
+			// aapt resource value: 0x7F0E019D
+			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131624349;
+			
+			// aapt resource value: 0x7F0E019E
+			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131624350;
 			
 			// aapt resource value: 0x7F0E019D
 			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131624349;

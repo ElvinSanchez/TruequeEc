@@ -7,7 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruequeEc.Android", "Truequ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruequeEc.iOS", "TruequeEc\TruequeEc.iOS\TruequeEc.iOS.csproj", "{8D680CC8-5B3D-4D54-BE6D-CE0C064140AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruequeEc", "TruequeEc\TruequeEc\TruequeEc.csproj", "{9C9787DB-72BD-408C-9C4A-43AD53707E5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TruequeEc", "TruequeEc\TruequeEc\TruequeEc.csproj", "{9C9787DB-72BD-408C-9C4A-43AD53707E5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A14F69AF-F2DC-4C44-B4CB-B3737B4DEC87}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

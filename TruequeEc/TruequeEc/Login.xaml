@@ -3,34 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TruequeEc.Login">
     <ContentPage.Content>
-
-        <Grid>
-            <BoxView Color="Gray" Opacity="0.8"/>
-
+        <StackLayout>
+            <Image Source="TruequeEc.png" WidthRequest="300" HeightRequest="300"/>
             <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
+                <BoxView Color="Gray" Opacity="0.8"/>
 
-                <StackLayout Grid.Row="1" Padding="30,20">
-                    <Entry Placeholder="Usuario" PlaceholderColor="White"/>
-                    <Entry Placeholder="Contraseña" PlaceholderColor="White" IsPassword="True"/>
-                    <Button Text="Iniciar sesión" BackgroundColor="White" BorderRadius="20" TextColor="Aqua"/>
-                    <StackLayout Orientation="Horizontal">
-                        <Button x:Name="CambioPassword" BackgroundColor="Transparent" BorderColor="Transparent" Text="¿Recuperar contraseña?" Clicked="CambioPassword_Clicked"/>
-                        <Button x:Name="Registro" BackgroundColor="Transparent" BorderColor="Transparent"  Text="Registrarse" Clicked="Registro_Clicked"/>
-                    </StackLayout>
-                </StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
 
-                <StackLayout Grid.Row="2" HorizontalOptions="Center" Margin="0,0,0,50">
-                    <Label Text="Iniciar sesión con" HorizontalOptions="Center"/>
-                    <StackLayout Orientation="Horizontal">                        
+                    <StackLayout Grid.Row="1" Padding="30,20">
+                        <Entry x:Name="User" Placeholder="Usuario" PlaceholderColor="White"/>
+                        <Entry x:Name="Pass"  Placeholder="Contraseña" PlaceholderColor="White" IsPassword="True"/>
+                        <Button x:Name="Iniciar" Text="Iniciar sesión" BackgroundColor="White" BorderRadius="20" TextColor="Aqua" Clicked="Iniciar_Clicked"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Button x:Name="CambioPassword" BackgroundColor="Transparent" BorderColor="Transparent" Text="¿Recuperar contraseña?" Clicked="CambioPassword_Clicked"/>
+                            <Button x:Name="Registro" BackgroundColor="Transparent" BorderColor="Transparent"  Text="Registrarse" Clicked="Registro_Clicked"/>
+                        </StackLayout>
                     </StackLayout>
-                </StackLayout>
+
+                    <StackLayout Grid.Row="2" HorizontalOptions="Center" Margin="0,0,0,50">
+                        <Label Text="Iniciar sesión con" HorizontalOptions="Center"/>
+                        <StackLayout Orientation="Horizontal">
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
             </Grid>
-        </Grid>
-        
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

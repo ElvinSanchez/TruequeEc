@@ -7,41 +7,26 @@
             <Image Source="TruequeEc.png" WidthRequest="100" HeightRequest="100" />
             <Label Text="Registro" HorizontalTextAlignment="Center" TextColor="Black" FontSize="20"/>
             <Label Text="Nuevo Usuario" HorizontalTextAlignment="Center" TextColor="Black" FontSize="20"/>
+
+            <Entry x:Name="txtUser" Placeholder="Usuario" Keyboard="Text" />
+            
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition />
                     <RowDefinition />
-                    <RowDefinition />                   
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Entry Grid.Row="0" Grid.Column="0" x:Name="txtNombre" Placeholder="Nombres" Keyboard="Text" />
-                <Entry Grid.Row="0" Grid.Column="1" x:Name="txtApellido" Placeholder="Apellidos" Keyboard="Text" />
-                <Entry Grid.Row="1" Grid.Column="0" x:Name="txtCedula" Placeholder="Cedula" Keyboard="Numeric" />
-                <Entry Grid.Row="1" Grid.Column="1" x:Name="txtCorreo" Placeholder="Correo Electrónico" Keyboard="Email" />
-                <Label Grid.Row="2" Grid.Column="0" x:Name="txtProvincia" Text="Provincia" />
-                <Picker Grid.Row="2" Grid.Column="0" x:Name="pkrProvincia" SelectedIndexChanged="pkrProvincia_SelectedIndexChanged"/>
-                <Entry Grid.Row="2" Grid.Column="1" x:Name="txtCiudad" Placeholder="Ciudad" Keyboard="Text" />
+                <Entry Grid.Row="0" Grid.Column="0" x:Name="txtCedula" Placeholder="Cedula" Keyboard="Numeric" />
+                <Entry Grid.Row="0" Grid.Column="1" x:Name="txtEmail" Placeholder="Correo Electrónico" Keyboard="Email" />
+                <Label Grid.Row="1" Grid.Column="0" x:Name="txtProvince" Text="Provincia" />
+                <Picker Grid.Row="1" Grid.Column="0" x:Name="pkrProvince" SelectedIndexChanged="pkrProvince_SelectedIndexChanged"/>
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="txtCity" Placeholder="Ciudad" Keyboard="Text" />
             </Grid>
 
-            <TableView Intent="Form">
-                <TableRoot>
-                    <TableSection Title="Nuevo Usuario" TextColor="Gray" >
-                        <EntryCell x:Name="Code"  Label="Nombre" />
-                        <EntryCell x:Name="User" Label="Usuario" />
-                        <EntryCell x:Name="Password" Label="Contraseña" />
-                        <EntryCell x:Name="Email" Label="E-mail" />
-                        <EntryCell x:Name="City"  Label="Ciudad" />
-                    </TableSection>
-                </TableRoot>
-            </TableView>
-            <Button x:Name="Save"
-                    Text="Guardar"
-                    Clicked="Save_Clicked">
-            </Button>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition />
@@ -53,20 +38,18 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition />
-                    <RowDefinition />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Entry Grid.Row="0"  Grid.Column="0" x:Name="txtTelefono" Placeholder="Teléfono" Keyboard="Telephone" />
-                <Label Grid.Row="0" Grid.Column="1" x:Name="txtGenero" Text="Género" />
-                <Picker Grid.Row="0" Grid.Column="1" x:Name="pkrGenero" SelectedIndexChanged="pkrGenero_SelectedIndexChanged" />
-                <Entry Grid.Row="1"  Grid.Column="0" x:Name="txtClave1" Placeholder="Contraseña" IsPassword="True" Keyboard="Text" />
-                <Entry Grid.Row="1" Grid.Column="1" x:Name="txtClave" Placeholder="Confirmar Contraseña" IsPassword="True" Keyboard="Text" />
+                <Entry Grid.Row="0"  Grid.Column="0" x:Name="txtPhone" Placeholder="Teléfono" Keyboard="Telephone" />
+                <Entry Grid.Row="0"  Grid.Column="1" x:Name="txtPassword" Placeholder="Contraseña" IsPassword="True" Keyboard="Text" />
             </Grid>
-           
+
+            <Button x:Name="Save" Text="Guardar" BorderRadius="20" Clicked="Save_Clicked" />
+
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition />
@@ -78,7 +61,6 @@
                 <Image Grid.Row="2" Source="ecuador.png" HorizontalOptions="Center" WidthRequest="20" HeightRequest="20" />
                 <Label Grid.Row="3" Text="Ecuador 2020" HorizontalTextAlignment="Center" TextColor="Black" FontSize="10" />
             </Grid>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

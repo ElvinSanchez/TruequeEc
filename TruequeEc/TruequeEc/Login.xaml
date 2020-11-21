@@ -20,17 +20,32 @@
                         <Entry x:Name="Pass"  Placeholder="Contraseña" PlaceholderColor="White" IsPassword="True"/>
                         <Button x:Name="Iniciar" Text="Iniciar sesión" BackgroundColor="White" BorderRadius="20" TextColor="Aqua" Clicked="Iniciar_Clicked"/>
                         <StackLayout Orientation="Horizontal">
-                            <Button x:Name="CambioPassword" BackgroundColor="Transparent" BorderColor="Transparent" Text="¿Recuperar contraseña?" Clicked="CambioPassword_Clicked"/>
-                            <Button x:Name="Registro" BackgroundColor="Transparent" BorderColor="Transparent"  Text="Registrarse" Clicked="Registro_Clicked"/>
+                            <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                                <Button Grid.Row="0"  Grid.Column="0" x:Name="CambioPassword" BackgroundColor="Transparent" BorderColor="Transparent" Text="¿Recuperar contraseña?" Clicked="CambioPassword_Clicked"/>
+                                <Button Grid.Row="0"  Grid.Column="1" x:Name="Registro" BackgroundColor="Transparent" BorderColor="Transparent" Text="Registrarse" Clicked="Registro_Clicked"/>
+                            </Grid>
                         </StackLayout>
                     </StackLayout>
-
-                    <StackLayout Grid.Row="2" HorizontalOptions="Center" Margin="0,0,0,50">
-                        <Label Text="Iniciar sesión con" HorizontalOptions="Center"/>
-                        <StackLayout Orientation="Horizontal">
-                        </StackLayout>
-                    </StackLayout>
+                    
                 </Grid>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="2" Source="ecuador.png" HorizontalOptions="Center" WidthRequest="20" HeightRequest="20" />
+                <Label Grid.Row="3" Text="Ecuador 2020" HorizontalTextAlignment="Center" TextColor="Black" FontSize="10" />
             </Grid>
         </StackLayout>
     </ContentPage.Content>

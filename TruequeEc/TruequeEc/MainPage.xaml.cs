@@ -14,5 +14,25 @@ namespace TruequeEc
         {
             InitializeComponent();
         }
+
+        private async void btnPublicar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Publicacion());
+        }
+
+        private void btnTrueque_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMuro_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void btnPerfil_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Models.Perfil());
+        }
     }
 }

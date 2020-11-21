@@ -41,7 +41,7 @@ namespace TruequeEc
             {
                 if(user.Equals("admin")&&pass.Equals("admin"))
                 {
-                    await Navigation.PushAsync(new Perfil());
+                    await Navigation.PushAsync(new MainPage());
                 }
                 else
                 {

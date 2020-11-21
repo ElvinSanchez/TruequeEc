@@ -15,49 +15,56 @@ namespace TruequeEc.Views
         public Registro()
         {
             InitializeComponent();
-            pkrGenero.Items.Add("MASCULINO");
-            pkrGenero.Items.Add("FEMENINO");
 
-            pkrProvincia.Items.Add("AZUAY");
-            pkrProvincia.Items.Add("BOLIVAR");
-            pkrProvincia.Items.Add("CAÑAR");
-            pkrProvincia.Items.Add("CARCHI");
-            pkrProvincia.Items.Add("CHIMBORAZO");
-            pkrProvincia.Items.Add("COTOPAXI");
-            pkrProvincia.Items.Add("EL ORO");
-            pkrProvincia.Items.Add("ESMERALDAS");
-            pkrProvincia.Items.Add("GALAPAGOS");
-            pkrProvincia.Items.Add("GUAYAS");
-            pkrProvincia.Items.Add("IMBABURA");
-            pkrProvincia.Items.Add("LOJA");
-            pkrProvincia.Items.Add("LOS RIOS");
-            pkrProvincia.Items.Add("MANABI");
-            pkrProvincia.Items.Add("MORONA SANTIAGO");
-            pkrProvincia.Items.Add("NAPO");
-            pkrProvincia.Items.Add("ORELLANA");
-            pkrProvincia.Items.Add("PASTAZA");
-            pkrProvincia.Items.Add("PICHINCHA");
-            pkrProvincia.Items.Add("SANTA ELENA");
-            pkrProvincia.Items.Add("STO. DGO. DE LOS TSACHILAS");
-            pkrProvincia.Items.Add("SUCUMBIOS");
-            pkrProvincia.Items.Add("TUNGURAGUA");
-            pkrProvincia.Items.Add("ZAMORA CHINCHIPE");
+            pkrProvince.Items.Add("AZUAY");
+            pkrProvince.Items.Add("BOLIVAR");
+            pkrProvince.Items.Add("CAÑAR");
+            pkrProvince.Items.Add("CARCHI");
+            pkrProvince.Items.Add("CHIMBORAZO");
+            pkrProvince.Items.Add("COTOPAXI");
+            pkrProvince.Items.Add("EL ORO");
+            pkrProvince.Items.Add("ESMERALDAS");
+            pkrProvince.Items.Add("GALAPAGOS");
+            pkrProvince.Items.Add("GUAYAS");
+            pkrProvince.Items.Add("IMBABURA");
+            pkrProvince.Items.Add("LOJA");
+            pkrProvince.Items.Add("LOS RIOS");
+            pkrProvince.Items.Add("MANABI");
+            pkrProvince.Items.Add("MORONA SANTIAGO");
+            pkrProvince.Items.Add("NAPO");
+            pkrProvince.Items.Add("ORELLANA");
+            pkrProvince.Items.Add("PASTAZA");
+            pkrProvince.Items.Add("PICHINCHA");
+            pkrProvince.Items.Add("SANTA ELENA");
+            pkrProvince.Items.Add("STO. DGO. DE LOS TSACHILAS");
+            pkrProvince.Items.Add("SUCUMBIOS");
+            pkrProvince.Items.Add("TUNGURAGUA");
+            pkrProvince.Items.Add("ZAMORA CHINCHIPE");
         }
         public void ClearLabels()
         {
-            Code.Text = string.Empty;
-            User.Text = string.Empty;
-            Password.Text = string.Empty;
-            Email.Text = string.Empty;
-            City.Text = string.Empty;
-
+            txtUser.Text = string.Empty;
+            txtCedula.Text = string.Empty;
+            txtPassword.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtProvince.Text = string.Empty;
+            txtCity.Text = string.Empty;
+            txtDireccion.Text = string.Empty;
+            txtPhone.Text = string.Empty;
         }
         private void Save_Clicked(object sender, EventArgs e)
         {
-            string user = User.Text;
-            string pass = Password.Text;
-            string mail = Email.Text;
-            if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pass) || string.IsNullOrEmpty(mail))
+            string user = txtUser.Text;
+            string cedula = txtCedula.Text;
+            string pass = txtPassword.Text;
+            string mail = txtEmail.Text;
+            string province = txtProvince.Text;
+            string city = txtCity.Text;
+            string address = txtDireccion.Text;
+            string phone = txtPhone.Text;
+
+            if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pass) || string.IsNullOrEmpty(mail)
+                ||string.IsNullOrEmpty(cedula)|| string.IsNullOrEmpty(province) || string.IsNullOrEmpty(city) || string.IsNullOrEmpty(address) || string.IsNullOrEmpty(phone))
             {
                 DisplayAlert("Atención", "No puede dejar casilleros vacíos", "Aceptar");
             }
@@ -66,16 +73,11 @@ namespace TruequeEc.Views
                 DisplayAlert("Información", "Registro guardado exitosamente", "Aceptar");
                 ClearLabels();
             }
-        }
+        }    
 
-        private void pkrGenero_SelectedIndexChanged(object sender, EventArgs e)
+        private void pkrProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var genero = pkrGenero.Items[pkrGenero.SelectedIndex];
-        }
-
-        private void pkrProvincia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var provincia = pkrProvincia.Items[pkrProvincia.SelectedIndex];
+            var provincia = pkrProvince.Items[pkrProvince.SelectedIndex];
         }
     }
 }

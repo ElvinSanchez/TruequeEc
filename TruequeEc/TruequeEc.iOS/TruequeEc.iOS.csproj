@@ -133,4 +133,7 @@
       <Name>TruequeEc</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TruequeEc.png" />
+  </ItemGroup>
 </Project>

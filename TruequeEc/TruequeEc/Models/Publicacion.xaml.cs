@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,7 +14,7 @@ namespace TruequeEc
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Publicacion : ContentPage
     {
-        public Publicacion()
+        public Publicacion(string user)
         {
             InitializeComponent();
         }
@@ -75,6 +76,35 @@ namespace TruequeEc
                 file.Dispose();
                 return stream;
             });
+        }
+
+        private async void btnPublicacion_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                WebClient regis = new WebClient();
+                var parametros = new System.Collections.Specialized.NameValueCollection();
+                parametros.Add("articulo", txtArticulo.Text);
+                parametros.Add("descripcion", txtDescripcion.Text);
+                parametros.Add("categoria", txtCategoria.Text);
+                parametros.Add("foto", Imagen.ToString());
+                parametros.Add("usuario", lblUser.Text);
+                if (string.IsNullOrEmpty(txtArticulo.Text) || string.IsNullOrEmpty(txtDescripcion.Text) || string.IsNullOrEmpty(txtCategoria.Text))
+                {
+                    await DisplayAlert("Atención", "No puede dejar casilleros vacíos", "Aceptar");
+                }
+                else
+                {
+                    regis.UploadValues("http://192.168.2.106:8080/publicacion/post.php", "POST", parametros);
+                    await DisplayAlert("Mensaje", "Ingresado Correctamente", "ok");
+                }
+            }
+            catch(Exception ex)
+            {
+                await DisplayAlert("Alerta", "Error" + ex.Message, "ok");
+
+            }
+
         }
     }
 }

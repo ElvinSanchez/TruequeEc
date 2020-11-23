@@ -4,9 +4,10 @@
              x:Class="TruequeEc.MainPage">
 
     <StackLayout>
-        <Label Text="Bienvenidos a TruequeEc" HorizontalTextAlignment="Center" TextColor="Black" FontSize="30"/>
+        <Label x:Name="lblUser" Text="Bienvenidos a TruequeEc" HorizontalTextAlignment="Center" TextColor="Black" FontAttributes="Bold" FontSize="30"/>
         <Image Source="TruequeEc.png" WidthRequest="250" HeightRequest="250" />
-
+        <Label x:Name="lblUser1" IsVisible="false"/>
+        
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition />
@@ -14,10 +15,10 @@
             </Grid.RowDefinitions>
         </Grid>
 
-        <Button x:Name="btnPerfil" Text="MI PERFIL" BorderRadius="20" Clicked="btnPerfil_Clicked" />
-        <Button x:Name="btnPublicar" Text="PUBLICAR" BorderRadius="20" Clicked="btnPublicar_Clicked" />
-        <Button x:Name="btnMuro" Text="MIS PUBLICACIONES" BorderRadius="20" Clicked="btnMuro_Clicked" />
-        <Button x:Name="btnTrueque" Text="TRUEQUE" BorderRadius="20" Clicked="btnTrueque_Clicked" />
+        <Button x:Name="btnPerfil" Text="MI PERFIL" BorderRadius="20" FontAttributes="Bold" Clicked="btnPerfil_Clicked" />
+        <Button x:Name="btnPublicar" Text="PUBLICAR" BorderRadius="20" FontAttributes="Bold" Clicked="btnPublicar_Clicked" />
+        <Button x:Name="btnMuro" Text="MIS PUBLICACIONES" BorderRadius="20" FontAttributes="Bold" Clicked="btnMuro_Clicked" />
+        <Button x:Name="btnTrueque" Text="TRUEQUE" BorderRadius="20" FontAttributes="Bold" Clicked="btnTrueque_Clicked" />
     </StackLayout>
 
 </ContentPage>

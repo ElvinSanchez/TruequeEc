@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using TruequeEc.Models;
@@ -12,7 +15,11 @@ namespace TruequeEc.Models
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Perfil : ContentPage
     {
-        public Perfil()
+        private const string Url = "http://192.168.2.103:8080/registro/post.php";
+        private readonly HttpClient client = new HttpClient();
+        private ObservableCollection<TruequeEc.Datos> _post;
+
+        public Perfil(string user)
         {
             InitializeComponent();
 
@@ -47,5 +54,22 @@ namespace TruequeEc.Models
             var provincia = pkrProvince.Items[pkrProvince.SelectedIndex];
         }
 
+        private async void btnoBTENER_Clicked(object sender, EventArgs e)
+        {
+            var content = await client.GetStringAsync(Url);
+            List<TruequeEc.Datos> posts = JsonConvert.DeserializeObject<List<TruequeEc.Datos>>(content);
+            _post = new ObservableCollection<TruequeEc.Datos>(posts);
+           // MyListView.ItemsSource = _post;
+        }
+
+        private void btnActualizar_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

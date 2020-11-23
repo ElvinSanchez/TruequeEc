@@ -3,10 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TruequeEc.Models.Perfil">
     <ContentPage.Content>
+                        
         <StackLayout>
             <Image Source="perfil.png" />
-            
-            <Entry x:Name="txtUser" Placeholder="Usuario" Keyboard="Text" />
+            <Label Text="Mi Perfil" HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold" />
+
+                
+                  <Entry x:Name="txtUser" Text="{Binding usuario}" Keyboard="Text" />
 
             <Grid>
                 <Grid.RowDefinitions>
@@ -18,11 +21,12 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Entry Grid.Row="0" Grid.Column="0" x:Name="txtCedula" Placeholder="Cedula" Keyboard="Numeric" />
-                <Entry Grid.Row="0" Grid.Column="1" x:Name="txtEmail" Placeholder="Correo Electrónico" Keyboard="Email" />
-                <Label Grid.Row="1" Grid.Column="0" x:Name="txtProvince" Text="Provincia" />
+                <Entry Grid.Row="0" Grid.Column="0" x:Name="txtCedula" Text="{Binding cedula}" IsReadOnly="True" Keyboard="Numeric" />
+                <Entry Grid.Row="0" Grid.Column="1" x:Name="txtEmail" Text="{Binding email}" Keyboard="Email" />
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="txtCity" Text="{Binding ciudad}" Keyboard="Text" />
+                <Label Grid.Row="1" Grid.Column="0" x:Name="txtProvince" Text="{Binding provincia}" />
                 <Picker Grid.Row="1" Grid.Column="0" x:Name="pkrProvince" SelectedIndexChanged="pkrProvince_SelectedIndexChanged"/>
-                <Entry Grid.Row="1" Grid.Column="1" x:Name="txtCity" Placeholder="Ciudad" Keyboard="Text" />
+
             </Grid>
 
             <Grid>
@@ -42,11 +46,16 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Entry Grid.Row="0"  Grid.Column="0" x:Name="txtPhone" Placeholder="Teléfono" Keyboard="Telephone" />
-                <Entry Grid.Row="0"  Grid.Column="1" x:Name="txtPassword" Placeholder="Contraseña" IsPassword="True" Keyboard="Text" />
+                <Entry Grid.Row="0"  Grid.Column="0" x:Name="txtPhone" Text="{Binding telefono}" Keyboard="Telephone" />
+                <Entry Grid.Row="0"  Grid.Column="1" x:Name="txtPassword" Text="{Binding password}" IsPassword="True" Keyboard="Text" />
             </Grid>
+
+            <Button x:Name="btnoBTENER" Text="OBTENER"   BorderRadius="20" FontAttributes="Bold" Clicked="btnoBTENER_Clicked"/>
+            <Button x:Name="btnActualizar" Text="ACTUALIZAR"  BorderRadius="20" FontAttributes="Bold" Clicked="btnActualizar_Clicked"/>
+            <Button x:Name="btnEliminar" Text="ELIMINAR"  BorderRadius="20" FontAttributes="Bold" Clicked="btnEliminar_Clicked" />
 
 
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

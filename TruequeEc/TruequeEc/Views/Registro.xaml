@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Image Source="TruequeEc.png" WidthRequest="100" HeightRequest="100" />
-            <Label Text="Registro" HorizontalTextAlignment="Center" TextColor="Black" FontSize="20"/>
+            <Label Text="Registro" HorizontalTextAlignment="Center" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
             <Label Text="Nuevo Usuario" HorizontalTextAlignment="Center" TextColor="Black" FontSize="20"/>
 
             <Entry x:Name="txtUser" Placeholder="Usuario" Keyboard="Text" />
@@ -48,7 +48,7 @@
                 <Entry Grid.Row="0"  Grid.Column="1" x:Name="txtPassword" Placeholder="Contraseña" IsPassword="True" Keyboard="Text" />
             </Grid>
 
-            <Button x:Name="Save" Text="Guardar" BorderRadius="20" Clicked="Save_Clicked" />
+            <Button x:Name="Save" Text="Guardar" BorderRadius="20" FontAttributes="Bold" Clicked="Save_Clicked" />
 
             <Grid>
                 <Grid.RowDefinitions>

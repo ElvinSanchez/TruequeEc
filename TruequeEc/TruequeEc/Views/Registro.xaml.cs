@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -52,27 +53,38 @@ namespace TruequeEc.Views
             txtDireccion.Text = string.Empty;
             txtPhone.Text = string.Empty;
         }
-        private void Save_Clicked(object sender, EventArgs e)
+        private async void Save_Clicked(object sender, EventArgs e)
         {
-            string user = txtUser.Text;
-            string cedula = txtCedula.Text;
-            string pass = txtPassword.Text;
-            string mail = txtEmail.Text;
-            string province = txtProvince.Text;
-            string city = txtCity.Text;
-            string address = txtDireccion.Text;
-            string phone = txtPhone.Text;
+            try
+            {
+                WebClient cliente = new WebClient();
+                var parametros = new System.Collections.Specialized.NameValueCollection();
+                parametros.Add("usuario", txtUser.Text);
+                parametros.Add("cedula", txtCedula.Text);
+                parametros.Add("password", txtPassword.Text);
+                parametros.Add("email", txtEmail.Text);
+                parametros.Add("provincia", pkrProvince.SelectedItem.ToString());
+                parametros.Add("ciudad", txtCity.Text);
+                parametros.Add("telefono", txtPhone.Text);
 
-            if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pass) || string.IsNullOrEmpty(mail)
-                ||string.IsNullOrEmpty(cedula)|| string.IsNullOrEmpty(province) || string.IsNullOrEmpty(city) || string.IsNullOrEmpty(address) || string.IsNullOrEmpty(phone))
-            {
-                DisplayAlert("Atención", "No puede dejar casilleros vacíos", "Aceptar");
+                if (string.IsNullOrEmpty(txtUser.Text) || string.IsNullOrEmpty(txtPassword.Text) || string.IsNullOrEmpty(txtEmail.Text)
+                || string.IsNullOrEmpty(txtCedula.Text) || string.IsNullOrEmpty(txtCity.Text) || string.IsNullOrEmpty(txtProvince.Text) || string.IsNullOrEmpty(txtPhone.Text))
+                {
+                    await DisplayAlert("Atención", "No puede dejar casilleros vacíos", "Aceptar");
+                }
+                else
+                {
+                    cliente.UploadValues("http://192.168.2.106:8080/registro/post.php", "POST", parametros);
+                    await DisplayAlert("Mensaje", "Ingresado Correctamente", "ok");
+                }
+
+
             }
-            else
+            catch (Exception ex)
             {
-                DisplayAlert("Información", "Registro guardado exitosamente", "Aceptar");
-                ClearLabels();
+                await DisplayAlert("Alerta", "Error: " + ex.Message, "ok");
             }
+            
         }    
 
         private void pkrProvince_SelectedIndexChanged(object sender, EventArgs e)

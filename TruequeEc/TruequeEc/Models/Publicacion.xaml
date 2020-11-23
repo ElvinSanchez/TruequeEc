@@ -1,11 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TruequeEc.Publicacion">
+             x:Class="TruequeEc.Publicacion"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
+            <Image Source="publicacion.png" />
+            <Label Text="Nueva Publicación" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="20"/>
+
+            <Label Text="Articulo"/>
+            <Entry   x:Name="txtArticulo" />
             <Label Text="Decripción del Producto"/>
-            <Entry x:Name="Descripcion"/>
+            <Entry   x:Name="txtDescripcion" />
+            <Label Text="Categoria"/>
+            <Entry   x:Name="txtCategoria" />
+            <Label x:Name="lblUser" IsVisible="false"/>
+
+            <Image x:Name="Imagen" WidthRequest="300" HeightRequest="300"/>
+            
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition />
@@ -15,10 +27,11 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Row="0" Grid.Column="0" x:Name="btnTomarFoto" Text="Tomar foto" Clicked="btnTomarFoto_Clicked"/>
-                <Button Grid.Row="0" Grid.Column="1" x:Name="btnSeleccionarFoto" Text="Seleccionar Foto" Clicked="btnSeleccionarFoto_Clicked"/>
+                <Button Grid.Row="0" Grid.Column="0" x:Name="btnTomarFoto" Text="Tomar foto" BorderRadius="20" FontAttributes="Bold" Clicked="btnTomarFoto_Clicked"/>
+                <Button Grid.Row="0" Grid.Column="1" x:Name="btnSeleccionarFoto" Text="Seleccionar Foto" BorderRadius="20" FontAttributes="Bold" Clicked="btnSeleccionarFoto_Clicked"/>
             </Grid>
-            <Image x:Name="Imagen"/>
+
+            <Button x:Name="btnPublicacion" Text="PUBLICAR" BorderRadius="20" FontAttributes="Bold" Clicked="btnPublicacion_Clicked"/>
 
         </StackLayout>
     </ContentPage.Content>

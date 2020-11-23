@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace TruequeEc.Models
+namespace TruequeEc.Categorias
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Perfiles : ContentPage
+    public partial class Juguetes : ContentPage
     {
-        public Perfiles()
+        public Juguetes()
         {
             InitializeComponent();
         }

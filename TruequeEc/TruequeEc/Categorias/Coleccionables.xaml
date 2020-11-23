@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:maps ="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             mc:Ignorable="d"
+             x:Class="TruequeEc.Categorias.Coleccionables">
+    <ContentPage.Resources>
+        <Style x:Key="Malla" TargetType="Grid">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="HeightRequest" Value="100"/>
+            <Setter Property="WidthRequest" Value="90"/>
+        </Style>
+        <StyleSheet>
+            <![CDATA[
+            #container{
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                margin: 20 0;
+            }
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+    <StackLayout>
+        
+        <Label Text="CATEGORIAS" FontSize="20" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center" />
+        <Label x:Name="latitud" Text="Latitud"/>
+        <Label x:Name="longitud" Text="Longitud"/>
+        <Label Text="Longi"/>
+        <Label Text="Lat"/>
+        <Button x:Name ="Ejemplo1"  Text="Ejemplo" Clicked="Ejemplo1_Clicked"/>
+        <Button x:Name="Buscar" Text="Buscar" Clicked="Buscar_Clicked"/>
+    </StackLayout>
+
+    
+</ContentPage>

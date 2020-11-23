@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TruequeEc.Models;
 using Xamarin.Forms;
 
 namespace TruequeEc
@@ -20,9 +21,9 @@ namespace TruequeEc
             await Navigation.PushAsync(new Publicacion());
         }
 
-        private void btnTrueque_Clicked(object sender, EventArgs e)
+        private async void btnTrueque_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Trueque());
         }
 
         private void btnMuro_Clicked(object sender, EventArgs e)
